@@ -29,7 +29,7 @@ def get_speech_client():
         # This handles both the triple-quote format and the \n format
         if "private_key" in creds_info:
             creds_info["private_key"] = creds_info["private_key"].replace("\\n", "\n")
-        
+            
         # 3. Create credentials
         credentials = service_account.Credentials.from_service_account_info(creds_info)
         
@@ -139,4 +139,5 @@ else:
 #         st.subheader("Final Transcription:")
 
 #         st.write(result_text)
+
 
