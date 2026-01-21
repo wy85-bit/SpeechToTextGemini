@@ -1,3 +1,12 @@
+import streamlit as st
+from google.cloud import speech
+import os
+
+
+st.set_page_config(page_title="VoiceNotes", layout="centered")
+
+
+
 def transcribe_audio_file(audio_bytes):
     client = speech.SpeechClient()
 
@@ -177,6 +186,7 @@ if audio_value:
 # #         st.subheader("Final Transcription:")
 
 # #         st.write(result_text)
+
 
 
 
